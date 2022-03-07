@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHUYỂN ĐỔI TIỀN TỆ</title>
+</head>
+<body>
+
+    <b>Amount</b> <br>
+    <input id="moneyto" type = "text" name = "1" > <br>
+
+    <b>From Currency</b> <br>
+    <select id="exchange"name = "dropdown">
+        <option  value = "VND" selected>VND</option>
+        <option  value = "USD" selected>USD</option>
+
+    </select> <br>
+    <b>To Currency</b> <br>
+    <select id="return" name = "dropdown2">
+        <option  value = "VND" selected>VND</option>
+        <option  value = "USD" selected>USD</option>
+    </select> <br> <br>
+<button onclick="convert()">Convert</button>
+
+
+
+<script>
+    function convert() {
+        let a = document.getElementById("moneyto").value;
+        let b = document.getElementById("exchange").value;
+        let c = document.getElementById("return").value;
+        let d
+        if (b == "USD" && c == "VND") {
+            d = Number(a) * 23000;
+        } else if (b == "VND" && c == "USD") {
+            d = Number(a) / 23000;
+        } else {
+          d  = a
+        }
+        document.write('Giá Trị chuyển đổi là = ' + d)
+    }
+
+
+
+</script>
+
+</body>
+</html>

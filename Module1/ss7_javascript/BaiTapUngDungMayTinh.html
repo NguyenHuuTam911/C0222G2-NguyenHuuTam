@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ỨNG DỤNG MÁY TÍNH</title>
+</head>
+<body>
+<input id="number" type="text" name="1">
+<input id="number1" type="text" name="2"> <br> <br>
+<button onclick="addition()">Addition(+)</button>
+<button onclick="subtraction()">Subtraction(-)</button>
+<button onclick="mutiplication()">Mutiplication(*)</button>
+<button onclick="division()">Division(/)</button>
+<script>
+    function addition() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("number1").value;
+        let c = Number(a) + Number(b) ;
+        document.write("tổng của hai số là = " + c)
+
+
+    }
+    function subtraction() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("number1").value;
+        let c = Number(a) - Number(b)
+        document.write("Hiệu của hai số là = " + c)
+
+    }
+    function mutiplication() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("number1").value;
+        let c = Number(a) * Number(b)
+        document.write("Tích của hai số là = " + c)
+
+    }
+    function division() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("number1").value;
+        let c = Number(a) / Number(b)
+        document.write("Thương của hai số là = " + c)
+
+    }
+</script>
+
+
+</body>
+</html>
