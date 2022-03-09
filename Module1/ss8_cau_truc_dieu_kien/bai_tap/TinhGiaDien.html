@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍNH GIÁ ĐIỆN</title>
+</head>
+<body>
+<script>
+    let kwh = parseInt(prompt("nhập vào số kwh tiêu thụ trong tháng"))
+
+    let money ;
+    if (kwh<50){
+        money = kwh * 800
+
+    }
+
+   else if(kwh<100){
+        money = (50*1000) + (kwh-50)*1500
+
+
+    }
+    else {
+        money = (50*1000) + (50*1500) + (kwh - 100) * 1800
+
+    }
+    document.write("số tiền điện phải trả là " + money)
+
+</script>
+
+</body>
+</html>

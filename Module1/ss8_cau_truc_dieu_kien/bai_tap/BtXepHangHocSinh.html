@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XẾP HẠNG HỌC SINH</title>
+</head>
+<body>
+<script>
+    let check = parseInt(prompt("nhập vào điểm kiểm tra"))
+    let term = parseInt(prompt("nhập vào điểm giữa kỳ"))
+    let final = parseInt(prompt("nhập vào điểm cuối kỳ"))
+    let avg = (check + (term * 2) + (final * 3))/6
+    if (avg>8){
+        document.write("học sinh xếp loại giỏi")
+    }
+    else if (avg>6.5){
+        document.write("học sinh xếp loại khá")
+    }
+    else if (avg>5){
+        document.write("học sinh xếp loại trung bình")
+    }
+    else{
+        document.write("học sinh xếp loại yếu")
+    }
+
+</script>
+
+</body>
+</html>

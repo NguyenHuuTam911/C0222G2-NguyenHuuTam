@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍNH SỐ NGÀY TRONG THÁNG</title>
+</head>
+<body>
+<input id="monthday" type="text"/>
+<button onclick="day()">Tính Số Ngày</button>
+<script>
+    function day() {
+        let month = parseInt(document.getElementById("monthday").value)
+        switch (month) {
+            case 1:
+            case 3:
+            case 5 :
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("tháng " + month + " có 31 ngày")
+                break;
+            case 2:
+                alert("tháng "+ month + "có 28 ngày")
+                default:
+                    alert("tháng" + month + "có 30 ngày")
+        }
+
+
+    }
+</script>
+
+
+</body>
+</html>

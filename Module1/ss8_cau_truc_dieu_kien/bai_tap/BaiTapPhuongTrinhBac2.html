@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIẢI PHƯƠNG TRÌNH BẬC 2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("vui lòng nhập vào giá trị của a"))
+    let b = parseInt(prompt("vui lòng nhập vào giá trị của b"))
+    let c = parseInt(prompt("vui lòng nhập vào giá trị của c"))
+    let delta = (b*b) - (4*a*c)
+    let x1x2 = -((b)/2*a)
+    let x1 = (-b + Math.sqrt(delta))/(2*a)
+    let x2 = (-b - Math.sqrt(delta))/(2*a)
+    x1 = parseFloat(x1).toFixed(2)
+    x2 = parseFloat(x2).toFixed(2)
+    if (delta<0){
+        document.write("phương trình vô nghiệm")
+    }
+    else if (delta=0){
+        document.write("phương trình có 2 nghiệm kép x1 = x2 = " + x1x2)
+    }
+    else {
+document.write("phương trình có hai nghiệm phân biệt x1 = " + x1 + " x2 = " + x2)
+    }
+
+</script>
+
+</body>
+</html>
