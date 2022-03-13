@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BẢNG CỬU CHƯƠNG</title>
+</head>
+<body>
+<script>
+    let table = '<table border="1">';
+
+    for (let i = 1; i < 10; i++) {
+        table += '<tr>';
+        for (let j = 2; j <= 10; j++) {
+            table += '<td>' + j + '*' + i + '=' + (i * j) + '</td>';
+        }
+        table += '</tr>';
+    }
+    table += '</tabel>';
+    document.write(table);
+</script>
+
+
+</body>
+</html>

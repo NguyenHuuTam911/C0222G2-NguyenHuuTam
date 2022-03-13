@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HIỂN THỊ DÃY 20 SỐ FIBONACCI</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    document.write(a +"<br>")
+    for (let i = 1; i < 19; ++i) {
+        let sum = a + b
+        a = b
+        b = sum
+        document.write(sum)
+        document.write("<br>")
+
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP TÍNH LÃI SUẤT NGÂN HÀNG</title>
+</head>
+<body>
+<script>
+    let money = 5000000
+    let month = 12
+    for(i=1 ; i<=12 ; i++){
+
+        let interestRate = (money * 1)/100
+        money = money + interestRate
+
+    }
+    let interest = money - 5000000
+document.write("lãi suất bạn phải trả trong 12 tháng là " + interest.toFixed(0))
+</script>
+
+</body>
+</html>
