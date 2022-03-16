@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IN CÁC KÝ TỰ CỦA MẢNG THEO THỨ TỰ ĐẢO NGƯỢC</title>
+</head>
+<body>
+<script>
+    let str = ['a','2','c','d','5','6','b']
+    let first = 0
+    let last = str.length-1
+    while (first<last){
+        let b = str[first]
+        str[first] = str[last]
+        str[last]=b
+        first ++
+        last--
+    }
+    str = str.join('')
+
+  document.write(str)
+
+</script>
+
+</body>
+</html>

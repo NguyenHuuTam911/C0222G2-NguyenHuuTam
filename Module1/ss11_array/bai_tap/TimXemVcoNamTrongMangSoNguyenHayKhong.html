@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÌM XEM V CÓ NẰM TRONG MẢNG SỐ NGUYÊN HAY KHÔNG</title>
+</head>
+<body>
+<script>
+    let numbers = [2,3,5,7,9,6,8,10,12,14]
+    let v = parseInt(prompt("nhập vào một số"))
+    let check = false;
+
+
+    for(let i =1 ; i<numbers.length ; i++ ){
+        if (numbers[i]===v){
+            check = true;
+        }
+    }
+    if (check){
+        document.write("V is in the Array")
+    }
+  else
+    document.write("V is not in the Array")
+
+
+</script>
+
+</body>
+</html>

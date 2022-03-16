@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xóa một phần tử khỏi mảng</title>
+</head>
+<body>
+<script>
+    let numbers = [2,4,6,8,10,1,3,5,7,9]
+    let v = parseInt(prompt("nhập vào một số"))
+    let check = false
+    let index = 0
+    for(let i =1 ; i<numbers.length ; i++){
+        if(numbers[i]===v){
+            check=true
+            numbers.splice(i,1)
+            numbers.push(0)
+
+
+        }
+
+
+
+
+    }
+
+
+    document.write(numbers)
+
+</script>
+
+</body>
+</html>
