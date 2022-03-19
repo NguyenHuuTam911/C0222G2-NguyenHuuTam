@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng Hình Tròn</title>
+</head>
+<body>
+<script>
+   class Circle {
+       constructor(radius) {
+           this.radius = radius
+
+
+       }
+       getDarius () {
+           return this.radius ;
+       }
+       getArea(){
+           return Math.PI * radius * radius   ;
+       }
+   }
+   let circle = new Circle(2)
+    let radius = circle.getDarius()
+    let area = circle.getArea()
+    alert("radius " + radius + " area " + area.toFixed(1))
+</script>
+
+</body>
+</html>
