@@ -1,12 +1,14 @@
-package bt_lam_them;
+package ss11_java_collection_framework.bai_tap.luyen_tap_arraylist.controller;
+
+import bt_lam_them.ProductManager;
 
 import java.util.Scanner;
 
-public class View {
-    static Scanner scanner=new Scanner(System.in);
-    static ProductManager productManager=new ProductManager();
+public class MenuProduct {
+    public void menuProduct(){
+        ProductManager productManager = new ProductManager();
+        Scanner scanner =  new Scanner(System.in);
 
-    public static void main(String[] args) {
         boolean flag=true;
         do {
             System.out.print( "\n1. Thêm sản phẩm\n" +
@@ -17,7 +19,7 @@ public class View {
                     "6. Sắp xếp sản phẩm tăng dần theo giá\n" +
                     "7. Sắp xếp sản phẩm giảm dần theo giá\n" +
                     "8. Thoát\n" +
-                    "Nhập đi: ");
+                    "Nhập lựa chọn: ");
             int choice=Integer.parseInt(scanner.nextLine());
 
             switch (choice){
@@ -25,52 +27,28 @@ public class View {
                     productManager.add();
                     break;
                 case 2:
-                    updateView();
+                    productManager.display();
                     break;
                 case 3:
-                    deleteView();
+                    productManager.delete();
                     break;
                 case 4:
                     productManager.display();
                     break;
                 case 5:
-                    searchView();
+                    productManager.search();
                     break;
                 case 6:
-                    System.out.println("sắp sếp");
+                    System.out.println("sắp xếp");
                     productManager.sortUpAscending();
                     break;
-                case 7:
-
-                    productManager.sortDescending();
-                    break;
-                case 8:
+                    case 7:
                     flag=false;
                     System.out.println("Chương trình đã thoát");
                     break;
-                default:
+
 
             }
         }while (flag);
-
-    }
-
-    public static void deleteView(){
-        System.out.print("\nNhập id muốn xoá: ");
-        int id=Integer.parseInt(scanner.nextLine());
-        productManager.delete(id);
-        System.out.print("Xoá thành công!!\n");
-    }
-
-    public static void searchView(){
-        System.out.print("\nNhập nên sản phẩm tìm kiếm: ");
-        String name=scanner.nextLine();
-        productManager.search(name);
-    }
-
-    public static void updateView(){
-        System.out.println("nhập id");
-        int id=Integer.parseInt(scanner.nextLine());
-        productManager.update(id);
     }
 }

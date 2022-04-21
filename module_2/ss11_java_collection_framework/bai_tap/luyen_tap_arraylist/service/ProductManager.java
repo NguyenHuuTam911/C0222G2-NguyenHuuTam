@@ -1,10 +1,12 @@
-package bt_lam_them;
+package ss11_java_collection_framework.bai_tap.luyen_tap_arraylist.service;
+
+import bt_lam_them.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class ProductManager {
+public class ProductManager implements Iproduct{
     Scanner scanner=new Scanner(System.in);
     static ArrayList<Product> product=new ArrayList<>();
     static {
@@ -12,8 +14,8 @@ public class ProductManager {
         product.add(new Product(2,"tivi",100000));
         product.add(new Product(4,"tủ lạnh",3000000));
     }
-
-    public void add(){
+    @Override
+    public void add() {
         System.out.print("Nhập id: ");
         int id=Integer.parseInt(scanner.nextLine());
         System.out.print("Nhập tên sản phẩm: ");
@@ -26,31 +28,40 @@ public class ProductManager {
             }
         }
         product.add(new Product(id,name,price));
+
     }
 
-    public void display(){
+    @Override
+    public void display() {
         for (Product value : product) {
             System.out.println(value);
         }
+
     }
 
-    public  void delete(int id){
+    @Override
+    public void delete(int id) {
         for (int i = 0; i < product.size(); i++) {
             if (id==product.get(i).getId() ){
                 product.remove(i);
                 i--;
             }
         }
+
     }
 
-    public void search(String name){
+    @Override
+    public void search(String name) {
         for (int i = 0; i < product.size(); i++) {
             if (product.get(i).getName().contains(name)){
                 System.out.print(product.get(i));
             }
         }
+
     }
-    public void update(int idCheck){
+
+    @Override
+    public void update(int idCheck) {
         int count=0;
         for (Product value : product) {
             if (idCheck == value.getId()) {
@@ -71,15 +82,16 @@ public class ProductManager {
         }else {
             System.out.println("không có id này");
         }
+
     }
-    public void sortUpAscending(){
+
+    @Override
+    public void sortUpAscending() {
         Collections.sort(product);
         System.out.println("So sanh tăng dần:");
 
         display();
+
     }
-    public void sortDescending(){
-//        Collections.sort(product, new DemoComparator());
-        display();
-    }
+
 }

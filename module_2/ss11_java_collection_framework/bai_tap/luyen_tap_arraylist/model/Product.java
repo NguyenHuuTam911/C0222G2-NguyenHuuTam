@@ -1,4 +1,4 @@
-package bt_lam_them;
+package ss11_java_collection_framework.bai_tap.luyen_tap_arraylist.model;
 
 public class Product implements Comparable<Product> {
     private Integer id;
@@ -50,6 +50,6 @@ public class Product implements Comparable<Product> {
     public int compareTo(Product o) {
         return this.price - o.getPrice();
     }
+
+
 }
-
-
