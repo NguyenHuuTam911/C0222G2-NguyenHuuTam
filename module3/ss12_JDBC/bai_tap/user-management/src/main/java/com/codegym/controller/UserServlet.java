@@ -76,11 +76,12 @@ public class UserServlet extends HttpServlet {
         }
     }
     private void showCountry(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
-        userDAO.searchCountry(country);
-        request.setAttribute("listUser", country);
+        String country = request.getParameter("searchCountry");
+
+        List<User> userList = userDAO.searchCountry(country);
+        request.setAttribute("listUser", userList);
         try {
-            request.getRequestDispatcher("user/search.jsp").forward(request,response);
+            request.getRequestDispatcher("user/list.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
