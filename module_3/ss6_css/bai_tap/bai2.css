@@ -1,0 +1,26 @@
+h1 {
+    color: black;
+    margin-left: 10px;
+}
+hr{
+    color: aliceblue;
+    margin-left: 5px;
+}
+h3{
+    color: #100f0f;
+    margin-left: 10px;
+}
+p{
+    color: #100f0f;
+    margin-left: 40px;
+
+}
+a{
+    color: blue;
+}
+.examp:link{
+    color: blue;
+    text-decoration: none;
+}
+
+
